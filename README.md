@@ -16,6 +16,41 @@ A self-hosted homelab running on a Lenovo ThinkCentre Mini, built with Proxmox V
 
 ---
 
+## 🗺️ Architecture
+
+```
+Internet
+    │
+    ▼
+Cloudflare (edyase.me)
+    │
+    ▼
+Cloudflare Tunnel
+    │
+    ▼
+NPM CT (192.168.1.6)
+    │
+    ├──► Jellyfin (192.168.1.3:8096)
+    ├──► Seerr (192.168.1.5:5055)
+    └──► Grafana (192.168.1.7:3000)
+
+Home Network (192.168.1.0/24)
+    │
+    ├── Pi-hole + Tailscale (192.168.1.2)
+    ├── Jellyfin (192.168.1.3)
+    ├── Arr Stack (192.168.1.4)
+    │   ├── qBittorrent :8080
+    │   ├── Prowlarr :9696
+    │   └── Sonarr :8989
+    ├── Seerr (192.168.1.5)
+    ├── NPM + Cloudflared (192.168.1.6)
+    └── Grafana + Prometheus (192.168.1.7)
+
+Media Flow:
+Jellyfin Enhanced → Seerr → Sonarr → qBittorrent → USB Drive → Jellyfin
+
+---
+
 ## 🌐 Network
 
 | Setting | Value |
@@ -377,37 +412,3 @@ chmod -R 775 /mnt/usb/media
 - [ ] Ollama — local AI
 
 ---
-
-## 🗺️ Architecture
-
-```
-Internet
-    │
-    ▼
-Cloudflare (edyase.me)
-    │
-    ▼
-Cloudflare Tunnel
-    │
-    ▼
-NPM CT (192.168.1.6)
-    │
-    ├──► Jellyfin (192.168.1.3:8096)
-    ├──► Seerr (192.168.1.5:5055)
-    └──► Grafana (192.168.1.7:3000)
-
-Home Network (192.168.1.0/24)
-    │
-    ├── Pi-hole + Tailscale (192.168.1.2)
-    ├── Jellyfin (192.168.1.3)
-    ├── Arr Stack (192.168.1.4)
-    │   ├── qBittorrent :8080
-    │   ├── Prowlarr :9696
-    │   └── Sonarr :8989
-    ├── Seerr (192.168.1.5)
-    ├── NPM + Cloudflared (192.168.1.6)
-    └── Grafana + Prometheus (192.168.1.7)
-
-Media Flow:
-Jellyfin Enhanced → Seerr → Sonarr → qBittorrent → USB Drive → Jellyfin
-```
