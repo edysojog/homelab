@@ -48,7 +48,7 @@ Home Network (192.168.1.0/24)
 
 Media Flow:
 Jellyfin Enhanced → Seerr → Sonarr → qBittorrent → USB Drive → Jellyfin
-
+```
 ---
 
 ## 🌐 Network
