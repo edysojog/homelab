@@ -430,3 +430,5 @@ chmod -R 775 /mnt/usb/media
 - [ ] Ollama — local AI
 
 ---
+
+## Thank you for checking my homelab out!
