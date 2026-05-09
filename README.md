@@ -155,7 +155,7 @@ Add to `/etc/pve/lxc/101.conf`:
 mp0: /mnt/usb,mp=/mnt/usb
 ```
 **Screenshot:**
-<img width="1810" height="941" alt="Image" src="https://github.com/user-attachments/assets/732f4299-0557-44f4-89eb-8abc73d6471f" />
+<img width="1810" height="941" alt="Image" src="https://github.com/user-attachments/assets/455c1014-0819-4c7f-9cf0-011bc0402499" />
 
 
 ---
