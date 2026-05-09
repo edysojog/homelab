@@ -56,17 +56,6 @@ curl -sSL https://install.pi-hole.net | bash
 - Blocklists: OISD Big + HaGeZi Pro
 - Web UI: `http://192.168.1.2/admin`
 
-**Add blocklists:**
-Go to Group Management → Adlists and add:
-```
-https://big.oisd.nl
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt
-```
-Then run Tools → Update Gravity.
-
-**Router setup:**
-Set Primary DNS to `192.168.1.2` in router DHCP settings.
-
 ---
 
 ### Tailscale (CT 100 — same as Pi-hole)
