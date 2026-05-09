@@ -1,4 +1,4 @@
-# 🏠 edyase's Homelab
+# 🏠 edy's Homelab
 
 A self-hosted homelab running on a Lenovo ThinkCentre Mini, built with Proxmox VE. This repo documents every service, configuration, and lesson learned.
  
