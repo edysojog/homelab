@@ -1,6 +1,9 @@
 # 🏠 edyase's Homelab
 
 A self-hosted homelab running on a Lenovo ThinkCentre Mini, built with Proxmox VE. This repo documents every service, configuration, and lesson learned.
+ 
+<img width="1810" height="941" alt="Image" src="https://github.com/user-attachments/assets/c4ed62bf-83b6-4a71-898c-d363d4862dc3" />
+
 
 ---
 
@@ -81,6 +84,7 @@ Jellyfin Enhanced → Seerr → Sonarr → qBittorrent → USB Drive → Jellyfi
 ### Pi-hole (CT 100)
 Network-wide ad blocking via DNS filtering.
 
+
 **Install:**
 ```bash
 curl -sSL https://install.pi-hole.net | bash
@@ -90,6 +94,12 @@ curl -sSL https://install.pi-hole.net | bash
 - Upstream DNS: Cloudflare (1.1.1.1)
 - Blocklists: OISD Big + HaGeZi Pro
 - Web UI: `http://192.168.1.2/admin`
+
+**Screenshot:**
+
+<img width="1248" height="940" alt="Image" src="https://github.com/user-attachments/assets/103eba48-c69d-484d-a57e-ced840fbe5d7" />
+
+
 
 ---
 
@@ -144,6 +154,9 @@ Add to `/etc/pve/lxc/101.conf`:
 ```
 mp0: /mnt/usb,mp=/mnt/usb
 ```
+**Screenshot:**
+<img width="1810" height="941" alt="Image" src="https://github.com/user-attachments/assets/732f4299-0557-44f4-89eb-8abc73d6471f" />
+
 
 ---
 
@@ -346,6 +359,11 @@ systemctl enable prometheus-node-exporter --now
 ```
 
 **Dashboard:** Import ID `1860` (Node Exporter Full) from Grafana dashboard library.
+
+
+**Screenshot:**
+<img width="1512" height="866" alt="Image" src="https://github.com/user-attachments/assets/572d5274-e8d7-478b-b09d-58052564accf" />
+
 
 ---
 
